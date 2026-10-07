@@ -9,8 +9,7 @@ int main(int argc, char** argv) {
     cv::Mat img = cv::imread(argv[1]);
     if (img.empty()) { std::cerr << "Goruntu okunamadi\n"; return 1; }
 
-    cv::Mat gray;
-    cv::cvtColor(img, gray, cv::COLOR_BGR2GRAY);
+    cv::Mat gray = cv::imread(argv[1], cv::IMREAD_GRAYSCALE);
 
     std::vector<cv::KeyPoint> keypoints;
     cv::FAST(gray, keypoints, 20, true);
