@@ -4,9 +4,9 @@
 
 int main() {
     std::cout << "Hello world!\n";
-    std::cout << "OpenCV surumu: " << CV_VERSION << "\n";
+    std::cout << "OpenCV version: " << CV_VERSION << "\n";
 
     Eigen::Matrix3d R = Eigen::Matrix3d::Identity();
-    std::cout << "Eigen 3x3 birim matris:\n" << R << "\n";
+    std::cout << "Eigen 3x3 identity matrix:\n" << R << "\n";
     return 0;
 }
