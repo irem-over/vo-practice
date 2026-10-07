@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
     for (size_t i = 0; i < files.size(); ++i) {
         cv::Mat img = cv::imread(files[i]);
         if (img.empty()) continue;
-        cv::putText(img, "Kare " + std::to_string(i), {10, 30},
+        cv::putText(img, "Frame " + std::to_string(i), {10, 30},
                     cv::FONT_HERSHEY_SIMPLEX, 1.0, {0, 255, 0}, 2);
         cv::imshow("Dizi", img);
         int key = cv::waitKey(33);

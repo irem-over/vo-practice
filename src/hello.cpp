@@ -3,7 +3,7 @@
 #include <Eigen/Dense>
 
 int main() {
-    std::cout << "Merhaba dunya!\n";
+    std::cout << "Hello world!\n";
     std::cout << "OpenCV surumu: " << CV_VERSION << "\n";
 
     Eigen::Matrix3d R = Eigen::Matrix3d::Identity();

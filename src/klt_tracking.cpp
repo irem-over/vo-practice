@@ -29,8 +29,8 @@ int main(int argc, char** argv) {
         cv::circle(color2, p2[i], 2, cv::Scalar(0, 0, 255), -1);
         ++tracked;
     }
-    std::cout << "Baslangic nokta: " << p1.size()
-              << ", takip edilen: " << tracked << "\n";
+    std::cout << "Frames: " << argv[1] << " -> " << argv[2]
+          << ", tracked: " << tracked << " / " << p1.size() << std::endl;
 
     cv::imwrite("results/04_klt_tracking.png", color2);
     cv::imshow("KLT", color2);

@@ -13,7 +13,8 @@ int main(int argc, char** argv) {
 
     std::vector<cv::KeyPoint> keypoints;
     cv::FAST(gray, keypoints, 20, true);
-    std::cout << "Bulunan kose sayisi: " << keypoints.size() << "\n";
+    std::cout << "Frame: " << argv[1] << ", threshold: 20, corners: "
+          << keypoints.size() << std::endl;
 
     cv::Mat out;
     cv::drawKeypoints(img, keypoints, out, cv::Scalar(0, 255, 0));
